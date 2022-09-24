@@ -1,3 +1,5 @@
+# A small basic text based calculator
+
 import math
 
 
