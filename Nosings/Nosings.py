@@ -70,10 +70,13 @@ if choice in ("y","Y"):
 #        pdf.ln()
 
     for key, value in quantity.items():
-        txt = (f"{key}\t...\t{value}")
+        #txt = (f"{key}\t...\t{value}")
+        #txt2 = (f"{value}")
+        #txt = "{:<8} {:<8}".format(key, value)
         #pdf.write(5,str(txt))
-        pdf.cell(200,5, txt=str(txt),ln=1,align="C")
-
+        pdf.cell(50,5, txt=str(key),ln=0,align="L")
+        pdf.cell(50,5, txt=str(value),ln=0,align="L")
+        pdf.ln()
 #    keyslist = []
 
 #    for key, item in quantity.items():
@@ -83,7 +86,7 @@ if choice in ("y","Y"):
     #print(keyslist)
 
 
-    pdf.cell(200, 30, txt=(f"Total... {str(total)}"), ln=1, align="R")
+    pdf.cell(200, 30, txt=(f"Total... {str(total)}           "), ln=1, align="R")
 
     pdf.output("test.pdf")
 
