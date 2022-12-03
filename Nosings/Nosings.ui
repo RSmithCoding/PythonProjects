@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>858</width>
-    <height>777</height>
+    <width>780</width>
+    <height>850</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
      <rect>
       <x>20</x>
       <y>610</y>
-      <width>451</width>
+      <width>301</width>
       <height>51</height>
      </rect>
     </property>
@@ -43,8 +43,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>530</y>
+      <x>440</x>
+      <y>610</y>
       <width>161</width>
       <height>51</height>
      </rect>
@@ -56,11 +56,16 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>0</y>
-      <width>311</width>
-      <height>61</height>
+      <x>100</x>
+      <y>20</y>
+      <width>330</width>
+      <height>40</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Nosing Order Summery&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -82,27 +87,14 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>610</y>
+      <x>330</x>
+      <y>670</y>
       <width>141</width>
       <height>51</height>
      </rect>
     </property>
     <property name="text">
      <string>Remove Last Size</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>600</x>
-      <y>20</y>
-      <width>231</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Sizes Entered...&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -121,7 +113,7 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>180</x>
+      <x>170</x>
       <y>670</y>
       <width>141</width>
       <height>51</height>
@@ -131,13 +123,31 @@
      <string>Create Summery</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>20</y>
+      <width>330</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:24pt; font-weight:700;&quot;&gt;Sizes Entered...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>858</width>
+     <width>780</width>
      <height>24</height>
     </rect>
    </property>
