@@ -6,69 +6,57 @@ root = Tk()
 
 root.title("Nosing Calculator")
 root.resizable(FALSE,FALSE)
-root.geometry("850x780")
+root.geometry("550x780")
 
-#root.grid_rowconfigure(1, weight=1)
-#root.grid_rowconfigure(2, weight=7)
-#root.grid_rowconfigure(3, weight=1)
-#root.grid_rowconfigure(4, weight=1)
+mainframe = Frame(root,height=780, width=550)
+mainframe.grid(column=1,row=1)
+mainframe.grid_rowconfigure(1,weight=1)
+mainframe.grid_rowconfigure(2,weight=7)
+mainframe.grid_rowconfigure(3,weight=1)
+mainframe.grid_rowconfigure(4,weight=1)
 
-"""HEADINGS"""
-heading_frame = Frame(root, bg="blue")
-heading_frame.grid(row=1, column=1, columnspan=5)
+"""HEADING LABELS"""
+heading1 = Label(mainframe,font=("Arial",24),text="Nosing Order Summary")
+heading1.grid(column=1, columnspan=2, row=1,)
 
-#heading_label = Label(heading_frame,text="Order Summary")
-#heading_label.grid(row=1,column=0,columnspan=3)
-#heading_label.config(font=("Arial",24))
+heading2 = Label(mainframe,font=("Arial",24),text="Sizes Entered...")
+heading2.grid(column=3, columnspan=2, row=1)
 
-#sub_heading_label = Label(heading_frame, text="Sizes Entered...")
-#sub_heading_label.grid(row=0,column=3,columnspan=2)
-#sub_heading_label.config(font=("Arial",24))
+"""ORDER SUMMARY"""
+order_summary = Label(mainframe, font=("Arial",18), text="""
+0.234   ....    x1
+0.544   ....    x1
+0.534   ....    x3""")
+order_summary.grid(column=1, columnspan=2,row=2,pady=(10,500))
 
-"""ORDER SUMMARY AREA"""
-order_summary_frame = Frame(root, bg='green')
-order_summary_frame.grid(row=2, column=1, columnspan=3)
+"""SIZES ENTERED"""
+sizes_entered = Label(mainframe, font=("Arial",18), text="""
+0.543
+0.345
+0.355
+0.355""")
+sizes_entered.grid(column=3, columnspan=2, row=2,pady=(10,500))
 
-#summary_label = Label(order_summary_frame,text="0.234   ...    x2")
-#summary_label.grid(row=1,column=1)
-#summary_label.config(font=("Arial",24))
+"""ENTRY / TOTAL"""
 
-"""SIZE LOG AREA"""
-size_log_frame = Frame(root, bg='red')  
-size_log_frame.grid(row=1, column=4, columnspan=2)
+entry = Entry(mainframe,width=20,font=("Arial",24),justify="right")
+entry.grid(column=1,columnspan=2,row=3,pady=(0,20))
 
-#size_log_label = Label(size_log_frame,text="0.242")
-#size_log_label.grid(row=1,column=1)
-#size_log_label.config(font=("Arial",24))
+total = Label(mainframe, text="0.234",font=("Arial",24))
+total.grid(column=3, columnspan=2,row=3,sticky="e",pady=(0,20))
 
-"""INPUT AREA"""
-input_frame = Frame(root, bg='yellow')  
-input_frame.grid(row=3, column=1, columnspan=5)
+"""BUTTONS"""
 
-#size_entry = Entry(input_frame,width=20)
-#size_entry.grid(row=2,column=0)
-#size_entry.config(font=("Arial",24),justify="right")
+pdf_button = Button(mainframe, text="Create PDF", padx=5, pady=20)
+pdf_button.grid(column=1,row=4,sticky="e,w,s")
 
-#running_total = Label(input_frame, text="0",padx=100)
-#running_total.grid(row=2,column=1)
-#running_total.config(font=("Arial",24),justify="right")
+create_summary_button = Button(mainframe, text="Create Order Summary",padx=5, pady=20)
+create_summary_button.grid(column=2,row=4,sticky="e,w,s")
 
-# BUTTONS
-buttons_frame = Frame(root, bg='orange')  
-buttons_frame.grid(row=4, column=1, columnspan=5)
+remove_last_button = Button(mainframe, text="Remove Last Size",padx=5,pady=20)
+remove_last_button.grid(column=3,row=4,sticky="e,w,s")
 
-#pdf_button = Button(buttons_frame,text="Create PDF",padx=10,pady=10)
-#pdf_button.grid(row=3, column=0)
-
-#summary_button = Button(buttons_frame,text="Create Summary",padx=10,pady=10)
-#summary_button.grid(row=3,column=1)
-
-#remove_button = Button(buttons_frame,text="Remove Last Size",padx=10,pady=10)
-#remove_button.grid(row=3,column=2)
-
-#close_button = Button(buttons_frame,text="Close",padx=25,pady=10)
-#close_button.grid(row=3,column=3)
-
-
+close_button = Button(mainframe, text="Close",padx=5, pady=20)
+close_button.grid(column=4,row=4,sticky="e,w,s")
 
 root.mainloop()
